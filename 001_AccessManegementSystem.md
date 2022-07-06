@@ -89,9 +89,9 @@ Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverを�
     <img src="./images/Slack02.PNG" width=500><br>
 
     * 「OAuth & Permissions」を選択し、「Scopes」で権限を追加<br>
-    <img src="./images/Slack03.PNG" width=500>
         * chat:write : メッセージの送信
         * chat:write.customize : ユーザー名とアバターのカスタマイズ<br>
+        <img src="./images/Slack03.PNG" width=500><br>
 
     * 「Install App」を選択し、「Install to Workspace」をクリック<br>
     <img src="./images/Slack04.PNG" width=500>
@@ -189,22 +189,21 @@ Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverを�
     * [Slackのワークスペースを追加する](https://slack.com/get-started#/create)で新しくワークスペースを作る
     * ワークスペースには、testチャンネルを作る<br>
       <img src="./images/Slack01.PNG" width=200>
-1. Slackアプリの準備
+2. Slackアプリの準備
     * [slack api](https://api.slack.com/apps)で「Create New App」をクリック
     * From scratchをクリックし、アプリ名とどのワークスペースで使うかを選択する<br>
-      * App Name : slackアプリ名
-      * Development Slack Workspace : slackのワークスペース<br>
-    <img src="./images/Slack02.PNG" width=500>
-  <br>
+        * App Name : slackアプリ名
+        * Development Slack Workspace : slackのワークスペース<br>
+    <img src="./images/Slack02.PNG" width=500><br>
 
     * 「OAuth & Permissions」を選択し、「Scopes」で権限を追加<br>
-    <img src="./images/Slack03.PNG" width=500>
-      * chat:write : メッセージの送信
-      * chat:write.customize : ユーザー名とアバターのカスタマイズ
-  <br>
+        * chat:write : メッセージの送信
+        * chat:write.customize : ユーザー名とアバターのカスタマイズ<br>
+        <img src="./images/Slack03.PNG" width=500><br>
+
     * 「Install App」を選択し、「Install to Workspace」をクリック<br>
     <img src="./images/Slack04.PNG" width=500>
-  
+
     * 「許可する」をクリック<br>
     <img src="./images/Slack05.PNG" width=500>
 
