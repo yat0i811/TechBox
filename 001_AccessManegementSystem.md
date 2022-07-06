@@ -32,7 +32,8 @@
 
 1. PCのUSB端子にPaSoRi(RC-S380)を接続し、プルダウンメニューからRC-S380と記述されているものを選択<br>
 Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverをボタンを押す。(初回はInstall Driver,2回目以降は、Replace Driver)<br>
-<img src="./images/Zadig02.png" width=500>
+
+<img src="./images/Zadig02.PNG" width=500>
 
 ### libusbのインストール
 1. [ここ](https://github.com/libusb/libusb/releases/tag/v1.0.22)からlibusb-1.0.22.7zをダウンロード(今回は1.0.22版を使います。)
