@@ -22,8 +22,4 @@
       ```
   2. 以下のライブラリのインストール<br>
       ```
-      Flask
-      Flask-Bootstrap
-      SQLAlchemy
       ```
-  
