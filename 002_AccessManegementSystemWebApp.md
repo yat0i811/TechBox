@@ -4,7 +4,7 @@
 ## 目次
 1. [はじめに]()
 1. [環境](#環境)
-1.
+1. [下準備](#下準備)
 1.
 
 ### はじめに
@@ -18,7 +18,7 @@
 ### 下準備
   1. 仮想環境の起動
       ```
-      myvenv/bin/activate
+      myvenv\Scripts\activate
       ```
   2. 以下のライブラリのインストール<br>
       ```
@@ -26,3 +26,4 @@
       Flask-Bootstrap
       SQLAlchemy
       ```
+  

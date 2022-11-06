@@ -21,7 +21,7 @@
 ### 環境(Windows)
   * Windows10 64bit
   * Python3.5~3.10
-  * PaSoRi(RC-S380) (カードリーダー) 
+  * PaSoRi(RC-S380) (カードリーダー)
 
 ### WinUSBのインストール
 1. [Zadigのサイト](https://zadig.akeo.ie/)からZadigの最新版をダウンロード
@@ -35,12 +35,11 @@ Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverを�
 <img src="./images/Zadig02.PNG" width=500>
 
 ### libusbのインストール
-1. [ここ](https://github.com/libusb/libusb/releases/tag/v1.0.22)からlibusb-1.0.22.7zをダウンロード(今回は1.0.22版を使います。)
+1. [ここ](https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26-binaries.7z)からlibusb-1.0.26.7zをダウンロード(今回は1.0.26版を使います。)
 1. 7zipを使って解凍(7zipは[ここ](https://www.7-zip.org/download.html)からダウンロードできます。)
 1. 解凍して生成されたフォルダの中から以下の２つのファイルを指定の場所にコピー
-    1. MS64dll\libusb-1.0.dllを C:\Windows\System32 へコピー
-    1. MS32\dll\libusb-1.0.dll を C:\Windows\SysWOW64へコピー
-
+    1. ./VS2015-x64\dll\libusb-1.0.dllを C:\Windows\System32 へコピー
+    1. ./VS2015-Win32\dll\libusb-1.0.dll を C:\Windows\SysWOW64 へコピー
 ### Pythonによるカードリーダー読み込みの実装
 1. ターミナル(cmd,powershell,Ubuntu,bash,zsh,etc)を立ち上げて、任意のディレクトリ配下に移動
 1. 仮想環境の構築&起動&仮想環境内のpipコマンドの更新(自身のPCに直接ライブラリを入れても良い方は飛ばしてOK)
@@ -56,22 +55,22 @@ Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverを�
 1. 学籍番号を読み込みスクリプトを作る(reader.py)
     ```
     import nfc
-    
+
     def reader():
-      
+
       #接続定義
       clf = nfc.ContactlessFrontend('usb')
       print("タッチしてください")
-      
+
       #タグの取得
       tag = clf.connect(rdwr={'on-connect': lambda tag: False})
-      
+
       #学生証の全情報
       card_info = tag.dump()
-      
+
       #学籍番号の抽出
       student_number = card_info[4][61:68]
-      
+
       #結果表示
       print(student_number)
       return student_number
@@ -122,7 +121,7 @@ Driverのところで、WinUSB(v6.1.7600.16385)を選択し、Install Driverを�
     def slack_post(student_number):
       TOKEN = 'slackアプリのトークン'
       CHANNEL = 'test'
-      
+
       url = "https://slack.com/api/chat.postMessage"
       headers = {"Authorization": "Bearer "+TOKEN}
       data  = {
